@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-white lg:pb-12">
+    <div className="bg-transparent lg:pb-12 mb-10">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <header className="flex items-center justify-between py-4 md:py-8">
           <Link
@@ -33,22 +33,22 @@ const Header = () => {
             </a>
 
             <a
-              href="#company"
+              href="#skills"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
             >
-              会社概要
+              技術スタック
             </a>
             <a
-              href="https://twitter.com/"
+              href="#quesitions"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
             >
-              Youtube
+              よくある質問
             </a>
             <a
-              href="https://twitter.com/"
+              href="#contact"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
             >
-              Twitter
+              お問い合わせ
             </a>
           </nav>
 

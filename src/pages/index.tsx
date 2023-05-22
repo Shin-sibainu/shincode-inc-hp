@@ -2,31 +2,56 @@
 /* eslint-disable @next/next/no-img-element */
 // pages/index.js
 /* https://flowrift.com/w/ */
+// https://chot-inc.com/contact
 import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 
 export default function Home() {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
+  const ref5 = useRef(null);
   const isInView1 = useInView(ref1, { once: true, margin: "-110px" });
   const isInView2 = useInView(ref2, { once: true, margin: "-110px" });
   const isInView3 = useInView(ref3, { once: true, margin: "-110px" });
   const isInView4 = useInView(ref4, { once: true, margin: "-110px" });
+  const isInView5 = useInView(ref5, { once: true, margin: "-110px" });
 
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+    emailjs
+      .send("service_co4320p", "template_xne9yqe", data, "_3C4XqSTeKsFjAnJx")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div>
       <Head>
-        <title>Speedfolio</title>
+        <title>ShinCode.inc</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css?family=Noto+Sans+JP"
@@ -96,7 +121,7 @@ export default function Home() {
             opacity: isInView1 ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
-          className="bg-white py-6 sm:py-12 lg:py-20 mt-10"
+          className="bg-white py-6 sm:py-12 lg:py-20 mt-10 rounded-t-xl"
         >
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <h2 className="mb-6 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl xl:mb-6">
@@ -308,6 +333,7 @@ export default function Home() {
             opacity: isInView3 ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
+          id="skills"
         >
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-10 md:mb-16">
@@ -385,66 +411,28 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  </svg>
-                </div>
+                <img src="./prisma.png" alt="threejs" className="w-1/5" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   Prisma
                 </h3>
               </div>
               <div className="flex flex-col items-center">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  </svg>
-                </div>
+                <img src="./tailwindcss.png" alt="threejs" className="w-1/4" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   TailwindCSS
                 </h3>
               </div>
               <div className="flex flex-col items-center">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  </svg>
-                </div>
+                <img src="./jwt.png" alt="threejs" className="w-1/4" />
+
+                <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
+                  JWT
+                </h3>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="./graphql.png" alt="threejs" className="w-1/4" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   GraphQL
@@ -462,6 +450,7 @@ export default function Home() {
             opacity: isInView4 ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
+          id="quesitions"
         >
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-10 md:mb-16">
@@ -492,10 +481,10 @@ export default function Home() {
                 </span>
 
                 <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  どのような業種のポートフォリオを作成できますか？
+                  フロントエンド開発はできますか？
                 </h3>
                 <p className="text-gray-500">
-                  業種に合うサイトのテンプレートをお選びください。テンプレートは随時追加しております。
+                  はい、フロントエンドに関する知識を豊富に備えておりますので開発可能です。ReactやNext.jsを使って高速で動くWeb制作が可能です。
                 </p>
               </div>
 
@@ -516,10 +505,10 @@ export default function Home() {
                 </span>
 
                 <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  どのくらいの期間でポートフォリオを完成させることができますか？
+                  ヘッドレスCMSの導入はできますか？
                 </h3>
                 <p className="text-gray-500">
-                  ご依頼を受けてから3日~1週間で納品させていただきます。
+                  はい、本HPのブログもCMSを利用して構築しております。ヘッドレスCMSの導入のご相談等も可能です。
                 </p>
               </div>
 
@@ -540,89 +529,26 @@ export default function Home() {
                 </span>
 
                 <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  デザインのカスタマイズは可能ですか？
+                  開発費用の概算ってどのくらいですか？
                 </h3>
                 <p className="text-gray-500">
-                  カスタマイズプランもご用意いたします。その場合は別途料金が必要になりますのでご了承くださいませ。
-                </p>
-              </div>
-
-              <div className="relative rounded-lg bg-gray-100 p-5 pt-8">
-                <span className="absolute -top-4 left-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-
-                <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  修正・更新は可能ですか？
-                </h3>
-                <p className="text-gray-500">
-                  内容の修正や更新は1000円から承っております。随時ご相談ください。
-                </p>
-              </div>
-
-              <div className="relative rounded-lg bg-gray-100 p-5 pt-8">
-                <span className="absolute -top-4 left-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-
-                <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  ポートフォリオを制作するための情報はどのように提供すればよいですか？
-                </h3>
-                <p className="text-gray-500">
-                  メールにて承ります。必要な情報はメールアドレスや氏名、運用中のSNSリンク、掲載したい画像や文章をご提示いただけると幸いです。
-                </p>
-              </div>
-
-              <div className="relative rounded-lg bg-gray-100 p-5 pt-8">
-                <span className="absolute -top-4 left-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-
-                <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
-                  どのような支払い方法がありますか？
-                </h3>
-                <p className="text-gray-500">
-                  クレジットカードや銀行振込にて対応しております。
+                  納期やプロジェクトの大きさによって異なります。会社HP制作であれば2ヶ月納期で100~200万円程度で引き受けることが可能です。
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-white py-6 sm:py-8 lg:py-12">
+        <section
+          className="bg-white py-6 sm:py-8 lg:py-12"
+          ref={ref5}
+          style={{
+            transform: isInView5 ? "none" : "translateX(200px)",
+            opacity: isInView5 ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+          id="contact"
+        >
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-10 md:mb-16">
               <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
@@ -630,22 +556,30 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                サービス内容等で分からない場合はご連絡ください。こちらのお問い合わせフォームでもご注文することは可能です。
+                開発の発注やその他ご相談に関しては以下のフォームからご連絡ください！ShinCodeが対応いたします。
               </p>
             </div>
 
-            <form className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
+            >
               <div>
                 <label
-                  htmlFor="first-name"
+                  htmlFor="firstName"
                   className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
                 >
                   姓
                 </label>
                 <input
-                  name="first-name"
                   className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("firstName", { required: true })}
                 />
+                {errors.firstName && (
+                  <span className="mt-1 text-red-500 block">
+                    姓は必須です。
+                  </span>
+                )}
               </div>
 
               <div>
@@ -656,9 +590,14 @@ export default function Home() {
                   名
                 </label>
                 <input
-                  name="last-name"
                   className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("lastName", { required: true })}
                 />
+                {errors.firstName && (
+                  <span className="mt-1 text-red-500 block">
+                    名は必須です。
+                  </span>
+                )}
               </div>
 
               <div className="sm:col-span-2">
@@ -669,8 +608,8 @@ export default function Home() {
                   会社名（任意）
                 </label>
                 <input
-                  name="company"
                   className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("company", { required: false })}
                 />
               </div>
 
@@ -682,9 +621,14 @@ export default function Home() {
                   メールアドレス
                 </label>
                 <input
-                  name="email"
                   className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("email", { required: true })}
                 />
+                {errors.email && (
+                  <span className="mt-1 text-red-500 block">
+                    メールアドレスは必須です。
+                  </span>
+                )}
               </div>
 
               <div className="sm:col-span-2">
@@ -695,9 +639,14 @@ export default function Home() {
                   お問い合わせ内容
                 </label>
                 <input
-                  name="subject"
                   className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("subject", { required: true })}
                 />
+                {errors.subject && (
+                  <span className="mt-1 text-red-500 block">
+                    お問い合わせ内容は必須です。
+                  </span>
+                )}
               </div>
 
               <div className="sm:col-span-2">
@@ -708,9 +657,14 @@ export default function Home() {
                   詳細内容
                 </label>
                 <textarea
-                  name="message"
                   className="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+                  {...register("message", { required: true })}
                 ></textarea>
+                {errors.message && (
+                  <span className="mt-1 text-red-500 block">
+                    詳細内容は必須です。
+                  </span>
+                )}
               </div>
 
               <div className="flex items-center justify-between sm:col-span-2">
@@ -722,7 +676,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="bg-white">
+        <footer className="bg-white rounded-b-xl">
           <div className="pt-12 lg:pt-16">
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
               <div className="mb-16 grid grid-cols-3 gap-12 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
@@ -743,17 +697,17 @@ export default function Home() {
                       >
                         <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                       </svg>
-                      Speedfolio
+                      ShinCode.inc
                     </Link>
                   </div>
 
                   <p className="mb-6 text-gray-500 sm:pr-8">
-                    ポートフォリオサイトを爆速に開発し、爆速で納品します。
+                    WebサイトやWebアプリ制作を承ります。
                   </p>
 
                   <div className="flex gap-4">
                     <a
-                      href="https://twitter.com/speedfolio"
+                      href="https://twitter.com/"
                       target="_blank"
                       className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
                     >
@@ -790,41 +744,6 @@ export default function Home() {
 
                 <div>
                   <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
-                    製品
-                  </div>
-
-                  <nav className="flex flex-col gap-4">
-                    <div>
-                      <a
-                        href="#"
-                        className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                      >
-                        ホーム
-                      </a>
-                    </div>
-
-                    <div>
-                      <a
-                        href="#"
-                        className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                      >
-                        テンプレート
-                      </a>
-                    </div>
-
-                    <div>
-                      <a
-                        href="#"
-                        className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                      >
-                        料金
-                      </a>
-                    </div>
-                  </nav>
-                </div>
-
-                <div>
-                  <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
                     会社
                   </div>
 
@@ -834,7 +753,7 @@ export default function Home() {
                         href="#"
                         className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                       >
-                        About
+                        Youtube
                       </a>
                     </div>
 
@@ -857,7 +776,7 @@ export default function Home() {
                   <nav className="flex flex-col gap-4">
                     <div>
                       <a
-                        href="#"
+                        href="#contact"
                         className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                       >
                         お問い合わせ
@@ -866,7 +785,7 @@ export default function Home() {
 
                     <div>
                       <a
-                        href="#"
+                        href="#question"
                         className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                       >
                         よくあるご質問

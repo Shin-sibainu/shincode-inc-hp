@@ -10,4 +10,5 @@ html {
 
 body {
   font-family: "Noto Sans JP";
+  @apply bg-blue-100;
 }

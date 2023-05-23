@@ -23,7 +23,7 @@ export default function Home() {
   const isInView4 = useInView(ref4, { once: true, margin: "-110px" });
   const isInView5 = useInView(ref5, { once: true, margin: "-110px" });
 
-  const [formSubmitted, setFormSubmitted] = useState(true);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const fadeIn = {
     hidden: { opacity: 0 },

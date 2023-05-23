@@ -7,7 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 
@@ -23,6 +23,8 @@ export default function Home() {
   const isInView4 = useInView(ref4, { once: true, margin: "-110px" });
   const isInView5 = useInView(ref5, { once: true, margin: "-110px" });
 
+  const [formSubmitted, setFormSubmitted] = useState(true);
+
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -31,6 +33,7 @@ export default function Home() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -40,10 +43,12 @@ export default function Home() {
       .send("service_co4320p", "template_xne9yqe", data, "_3C4XqSTeKsFjAnJx")
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          reset();
+          setFormSubmitted(true);
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       );
   };
@@ -672,6 +677,11 @@ export default function Home() {
                   送信
                 </button>
               </div>
+              {formSubmitted && (
+                <span className="text-green-500 whitespace-nowrap">
+                  お問い合わせありがとうございます！返信まで今しばらくお待ちください。
+                </span>
+              )}
             </form>
           </div>
         </section>

@@ -455,12 +455,12 @@ export default function Home() {
             opacity: isInView4 ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
-          id="quesitions"
+          id="questions"
         >
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-10 md:mb-16">
               <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                よくある質問
+                よくあるご質問
               </h2>
 
               <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
@@ -795,7 +795,7 @@ export default function Home() {
 
                     <div>
                       <a
-                        href="#question"
+                        href="#questions"
                         className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                       >
                         よくあるご質問

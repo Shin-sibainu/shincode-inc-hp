@@ -137,7 +137,7 @@ export default function Home() {
             </p>
             <div className="mt-4 mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
               <a
-                href="#"
+                href="https://worldhacks.co.jp/"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -168,7 +168,7 @@ export default function Home() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-                  SNS
+                  SNS(開発中)
                 </span>
               </a>
 
@@ -242,7 +242,7 @@ export default function Home() {
             </p>
             <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
               <a
-                href="#"
+                href="https://www.udemy.com/course/threejs-beginner/?couponCode=2C0AB40E66FEB4A00EB7"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -260,7 +260,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://www.udemy.com/course/notion-fullstack-webdev/?couponCode=99D11481CF73BA2A9E5C"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -278,7 +278,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://www.udemy.com/course/notion-nextjs-blog-dev/?couponCode=3DF2FAE5488C23B4F4FC"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -296,7 +296,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://www.udemy.com/course/fullstack-mern-project-course/?couponCode=D1AFE3AE0EF8D5685984"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -416,28 +416,32 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center">
-                <img src="./prisma.png" alt="threejs" className="w-1/5" />
+                <img src="./prisma.png" alt="Prisma" className="w-1/5" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   Prisma
                 </h3>
               </div>
               <div className="flex flex-col items-center">
-                <img src="./tailwindcss.png" alt="threejs" className="w-1/4" />
+                <img
+                  src="./tailwindcss.png"
+                  alt="TailwindCSS"
+                  className="w-1/4"
+                />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   TailwindCSS
                 </h3>
               </div>
               <div className="flex flex-col items-center">
-                <img src="./jwt.png" alt="threejs" className="w-1/4" />
+                <img src="./jwt.png" alt="JWT" className="w-1/4" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   JWT
                 </h3>
               </div>
               <div className="flex flex-col items-center">
-                <img src="./graphql.png" alt="threejs" className="w-1/4" />
+                <img src="./graphql.png" alt="GraphQL" className="w-1/4" />
 
                 <h3 className="mb-2 text-center text-lg font-semibold md:text-xl">
                   GraphQL

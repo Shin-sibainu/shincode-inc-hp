@@ -544,6 +544,54 @@ export default function Home() {
                   納期やプロジェクトの大きさによって異なります。会社HP制作であれば2ヶ月納期で100~200万円程度で引き受けることが可能です。
                 </p>
               </div>
+
+              <div className="relative rounded-lg bg-gray-100 p-5 pt-8">
+                <span className="absolute -top-4 left-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+
+                <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
+                  3DCGを用いたWeb制作は可能ですか？
+                </h3>
+                <p className="text-gray-500">
+                  はい、可能です。弊社ではThree.jsの技術を用いたエンジニアが在籍しております。ただ高度なWebGLとなると要相談となります。
+                </p>
+              </div>
+
+              <div className="relative rounded-lg bg-gray-100 p-5 pt-8">
+                <span className="absolute -top-4 left-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+
+                <h3 className="mb-3 text-lg font-semibold text-indigo-500 md:text-xl">
+                  高速で動くWebサイト/アプリ開発は可能ですか？
+                </h3>
+                <p className="text-gray-500">
+                  Next.jsの技術を使ったSEOパフォーマンスの高いWebサイトを作ることが可能です。SSGやISR等、必要に応じて使い分けを行います。
+                </p>
+              </div>
             </div>
           </div>
         </section>

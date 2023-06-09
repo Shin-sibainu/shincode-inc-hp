@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-transparent lg:pb-12 mb-10">
+    <div className="bg-transparent lg:pb-12 mb-10 mt-2">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8 flex flex-col">
         <header className="flex items-center justify-between py-4 md:py-8">
           <Link

@@ -137,7 +137,7 @@ export default function Home() {
             </p>
             <div className="mt-4 mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
               <a
-                href="https://worldhacks.co.jp/"
+                href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img

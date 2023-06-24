@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>ShinCode.inc</title>
+        <title>ShinCode</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css?family=Noto+Sans+JP"
@@ -77,7 +77,7 @@ export default function Home() {
           <div className="mb-8 flex flex-wrap justify-between md:mb-16">
             <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pt-10 lg:pb-24">
               <h1 className="text-black-800 mb-4 text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl">
-                ShinCode.inc
+                ShinCode
               </h1>
 
               <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
@@ -317,7 +317,7 @@ export default function Home() {
             <div className="flex items-start justify-between gap-8 sm:items-center">
               <p className="max-w-screen-sm text-sm text-gray-500 lg:text-base">
                 Youtube +
-                Udemyにてプログラミング教育コンテンツを発信しています。発信している技術スタックは弊社で全て利用可能です。
+                Udemyにてプログラミング教育コンテンツを発信しています。発信している技術スタックは全て利用可能です。
               </p>
 
               <a
@@ -565,7 +565,7 @@ export default function Home() {
                   3DCGを用いたWeb制作は可能ですか？
                 </h3>
                 <p className="text-gray-500">
-                  はい、可能です。弊社ではThree.jsの技術を用いたエンジニアが在籍しております。ただ高度なWebGLとなると要相談となります。
+                  はい、可能です。Three.jsの技術を用いたエンジニアが在籍しております。ただ高度なWebGLとなると要相談となります。
                 </p>
               </div>
 
@@ -759,7 +759,7 @@ export default function Home() {
                       >
                         <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                       </svg>
-                      ShinCode.inc
+                      ShinCode
                     </Link>
                   </div>
 

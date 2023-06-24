@@ -27,7 +27,7 @@ const Header = () => {
             >
               <path d="M96 0V47L48 94H0V47L48 0H96Z" />
             </svg>
-            ShinCode.inc
+            ShinCode
           </Link>
 
           <nav className="hidden gap-12 lg:flex">

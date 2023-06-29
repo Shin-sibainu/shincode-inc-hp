@@ -81,7 +81,7 @@ export default function Home() {
               </h1>
 
               <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
-                HP/Web制作/Webアプリ開発会社です。
+                HP/Web制作/Webアプリ開発を承っております。
                 <br />
                 あなたのビジョンをWebで実現します。
               </p>
@@ -806,7 +806,7 @@ export default function Home() {
 
                 <div>
                   <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
-                    会社
+                    SNS
                   </div>
 
                   <nav className="flex flex-col gap-4">
